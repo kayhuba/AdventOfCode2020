@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "puzzle01": "tsc && node build/puzzle01.js",
+    "puzzle02": "tsc && node build/puzzle02.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
