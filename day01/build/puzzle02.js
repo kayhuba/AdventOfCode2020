@@ -13,6 +13,11 @@ var line_reader_1 = __importDefault(require("line-reader"));
  * if a < 2020 * 1/3 then b or c have to be bigger than 2020 * 1/3
  * if a >= 2020 * 2/3 then b or c have to be smaller than 2020 * 2/3
  * if a is between 1/3 and 2/3 then we skip it because it will be "b or c" in one of the other two cases
+ *
+ * Once a and b are defined, choose c like this:
+ *
+ * if a + b < 1010 then c has to be bigger than 1010
+ * if a + b >= 1010 then c has to be smaller than 1010
  */
 var numberArray = [];
 // indices of numbers in numberArray that are from 0 to 1/3 of 2020
@@ -52,6 +57,9 @@ line_reader_1.default.eachLine("./input/input.txt", function (line, last) {
             var n = indexArray.length;
             for (var i = 0; i < n; i++) {
                 third = numberArray[indexArray[i]];
+                if (third === first || third === second) {
+                    continue;
+                }
                 if (firstSecondSum + third === 2020) {
                     console.log("Riddle solution: " + (first * second * third));
                     return true;

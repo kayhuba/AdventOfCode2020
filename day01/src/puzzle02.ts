@@ -10,6 +10,11 @@ import linereader from "line-reader";
  * if a < 2020 * 1/3 then b or c have to be bigger than 2020 * 1/3
  * if a >= 2020 * 2/3 then b or c have to be smaller than 2020 * 2/3
  * if a is between 1/3 and 2/3 then we skip it because it will be "b or c" in one of the other two cases
+ *
+ * Once a and b are defined, choose c like this:
+ *
+ * if a + b < 1010 then c has to be bigger than 1010
+ * if a + b >= 1010 then c has to be smaller than 1010
  */
 
 const numberArray : number[] = [];
@@ -56,6 +61,10 @@ linereader.eachLine("./input/input.txt", (line, last) => {
             let n = indexArray.length;
             for (let i=0; i < n; i++) {
                 third = numberArray[indexArray[i]];
+                if (third === first || third === second) {
+                    continue;
+                }
+
                 if (firstSecondSum + third === 2020) {
                     console.log("Riddle solution: " + (first * second * third));
                     return true;
