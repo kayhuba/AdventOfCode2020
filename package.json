@@ -1,0 +1,23 @@
+{
+  "name": "adventofcode2020",
+  "version": "1.0.0",
+  "description": "parent package of AdventOfCode2020",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayhuba/AdventOfCode2020.git"
+  },
+  "keywords": [
+    "adventofcode2020",
+    "aoc2020",
+    "2020"
+  ],
+  "author": "Kay Huber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kayhuba/AdventOfCode2020/issues"
+  },
+  "homepage": "https://github.com/kayhuba/AdventOfCode2020#readme",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
+}

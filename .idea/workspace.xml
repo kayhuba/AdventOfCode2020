@@ -26,15 +26,192 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc0e71b-8a99-4c81-be67-8f25dac22dac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01/build/puzzle02.js" beforeDir="false" afterPath="$PROJECT_DIR$/day01/build/puzzle02.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01/build/puzzle02.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/day01/build/puzzle02.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01/src/puzzle02.ts" beforeDir="false" afterPath="$PROJECT_DIR$/day01/src/puzzle02.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/tsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/tsserver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/AUTHORS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/CODE_OF_CONDUCT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/CopyrightNotice.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/ThirdPartyNoticeText.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/bin/tsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/bin/tsserver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/cancellationToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/cs/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/de/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/es/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/fr/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/it/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/ja/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/ko/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.iterable.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.collection.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.core.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.generator.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.iterable.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.promise.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.proxy.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.reflect.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.symbol.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.array.include.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.full.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.full.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.intl.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.object.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.string.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.full.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.intl.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.promise.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.regexp.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.array.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.full.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.object.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.string.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.symbol.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.bigint.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.full.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.intl.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.promise.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.string.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es6.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.full.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.intl.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.promise.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.string.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.weakref.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.scripthost.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.importscripts.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.iterable.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/pl/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/protocol.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/pt-br/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/ru/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tr/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsserver.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsserverlibrary.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsserverlibrary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typesMap.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescript.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescriptServices.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescriptServices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typingsInstaller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/watchGuard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/zh-cn/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/lib/zh-tw/diagnosticMessages.generated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHS/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHS/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHS/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHS/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHS/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHS/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHT/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHT/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHT/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHT/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHT/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CHT/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CSY/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CSY/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CSY/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CSY/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CSY/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/CSY/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/DEU/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/DEU/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/DEU/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/DEU/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/DEU/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/DEU/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ESN/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ESN/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ESN/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ESN/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ESN/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ESN/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/FRA/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/FRA/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/FRA/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/FRA/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/FRA/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/FRA/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ITA/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ITA/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ITA/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ITA/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ITA/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/ITA/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/JPN/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/JPN/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/JPN/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/JPN/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/JPN/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/JPN/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/KOR/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/KOR/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/KOR/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/KOR/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/KOR/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/KOR/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PLK/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PLK/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PLK/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PLK/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PLK/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PLK/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PTB/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PTB/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PTB/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PTB/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PTB/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/PTB/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/RUS/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/RUS/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/RUS/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/RUS/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/RUS/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/RUS/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/TRK/Targets/ProjectItemsSchema.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/TRK/Targets/TypeScriptCompile.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/TRK/Targets/TypeScriptProjectProperties.xaml.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/TRK/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/TRK/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/loc/lcl/TRK/TypeScriptTasks/TypeScript.Tasks.dll.lcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/typescript/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +269,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606853009096</updated>
       <workItem from="1606853011004" duration="9067000" />
-      <workItem from="1606893643987" duration="299000" />
+      <workItem from="1606893643987" duration="485000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606854324607</created>
@@ -115,7 +292,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606862068750</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Slightly corrected puzzle02 of day01">
+      <created>1606894001657</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606894001657</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Moved .idea folder to main project folder">
+      <created>1606894089267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606894089267</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,85 +340,87 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Finished puzzle01 for day01" />
     <MESSAGE value="Finished puzzle02 for day01" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished puzzle02 for day01" />
+    <MESSAGE value="Slightly corrected puzzle02 of day01" />
+    <MESSAGE value="Moved .idea folder to main project folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved .idea folder to main project folder" />
   </component>
   <component name="WindowStateProjectService">
     <state x="422" y="192" width="1076" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606893746658">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="422" y="192" width="1076" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606893746658" />
-    <state x="550" y="107" width="816" height="849" key="CommitChangelistDialog2" timestamp="1606862068594">
+    <state x="550" y="107" width="816" height="849" key="CommitChangelistDialog2" timestamp="1606894089175">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="550" y="107" width="816" height="849" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1606862068594" />
+    <state x="550" y="107" width="816" height="849" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1606894089175" />
     <state x="1203" y="360" width="424" height="478" key="FileChooserDialogImpl" timestamp="1606893732115">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1203" y="360" width="424" height="478" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1606893732115" />
-    <state width="1899" height="338" key="GridCell.Tab.0.bottom" timestamp="1606893766033">
+    <state width="1899" height="338" key="GridCell.Tab.0.bottom" timestamp="1606893962962">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766033" />
-    <state width="1899" height="338" key="GridCell.Tab.0.center" timestamp="1606893766032">
+    <state width="1899" height="338" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962962" />
+    <state width="1899" height="338" key="GridCell.Tab.0.center" timestamp="1606893962962">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766032" />
-    <state width="1899" height="338" key="GridCell.Tab.0.left" timestamp="1606893766032">
+    <state width="1899" height="338" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962962" />
+    <state width="1899" height="338" key="GridCell.Tab.0.left" timestamp="1606893962961">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766032" />
-    <state width="1899" height="338" key="GridCell.Tab.0.right" timestamp="1606893766032">
+    <state width="1899" height="338" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962961" />
+    <state width="1899" height="338" key="GridCell.Tab.0.right" timestamp="1606893962962">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766032" />
-    <state width="1899" height="338" key="GridCell.Tab.1.bottom" timestamp="1606893765890">
+    <state width="1899" height="338" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962962" />
+    <state width="1899" height="338" key="GridCell.Tab.1.bottom" timestamp="1606893962963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
-    <state width="1899" height="338" key="GridCell.Tab.1.center" timestamp="1606893765889">
+    <state width="1899" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962963" />
+    <state width="1899" height="338" key="GridCell.Tab.1.center" timestamp="1606893962962">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765889" />
-    <state width="1899" height="338" key="GridCell.Tab.1.left" timestamp="1606893765889">
+    <state width="1899" height="338" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962962" />
+    <state width="1899" height="338" key="GridCell.Tab.1.left" timestamp="1606893962962">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765889" />
-    <state width="1899" height="338" key="GridCell.Tab.1.right" timestamp="1606893765889">
+    <state width="1899" height="338" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962962" />
+    <state width="1899" height="338" key="GridCell.Tab.1.right" timestamp="1606893962963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765889" />
-    <state width="1899" height="338" key="GridCell.Tab.2.bottom" timestamp="1606893765890">
+    <state width="1899" height="338" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962963" />
+    <state width="1899" height="338" key="GridCell.Tab.2.bottom" timestamp="1606893962964">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
-    <state width="1899" height="338" key="GridCell.Tab.2.center" timestamp="1606893765890">
+    <state width="1899" height="338" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962964" />
+    <state width="1899" height="338" key="GridCell.Tab.2.center" timestamp="1606893962963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
-    <state width="1899" height="338" key="GridCell.Tab.2.left" timestamp="1606893765890">
+    <state width="1899" height="338" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962963" />
+    <state width="1899" height="338" key="GridCell.Tab.2.left" timestamp="1606893962963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
-    <state width="1899" height="338" key="GridCell.Tab.2.right" timestamp="1606893765890">
+    <state width="1899" height="338" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962963" />
+    <state width="1899" height="338" key="GridCell.Tab.2.right" timestamp="1606893962963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
-    <state width="1899" height="338" key="GridCell.Tab.3.bottom" timestamp="1606893765892">
+    <state width="1899" height="338" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962963" />
+    <state width="1899" height="338" key="GridCell.Tab.3.bottom" timestamp="1606893962964">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765892" />
-    <state width="1899" height="338" key="GridCell.Tab.3.center" timestamp="1606893765891">
+    <state width="1899" height="338" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962964" />
+    <state width="1899" height="338" key="GridCell.Tab.3.center" timestamp="1606893962964">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765891" />
-    <state width="1899" height="338" key="GridCell.Tab.3.left" timestamp="1606893765891">
+    <state width="1899" height="338" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962964" />
+    <state width="1899" height="338" key="GridCell.Tab.3.left" timestamp="1606893962964">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765891" />
-    <state width="1899" height="338" key="GridCell.Tab.3.right" timestamp="1606893765891">
+    <state width="1899" height="338" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962964" />
+    <state width="1899" height="338" key="GridCell.Tab.3.right" timestamp="1606893962964">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="338" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765891" />
+    <state width="1899" height="338" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893962964" />
     <state x="467" y="169" width="986" height="724" key="SettingsEditor" timestamp="1606856284653">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
