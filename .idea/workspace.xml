@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9fc0e71b-8a99-4c81-be67-8f25dac22dac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/day01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/build/puzzle02.js" beforeDir="false" afterPath="$PROJECT_DIR$/day01/build/puzzle02.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/build/puzzle02.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/day01/build/puzzle02.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/src/puzzle02.ts" beforeDir="false" afterPath="$PROJECT_DIR$/day01/src/puzzle02.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1l4OgSDQnMH0uON57K0IWGJgdWn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.2.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day01/build/puzzle02.js" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day01/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.day01_puzzle02.js">
+    <configuration name="day01_puzzle02.js" type="NodeJSConfigurationType" path-to-js-file="build/puzzle02.js" working-dir="$PROJECT_DIR$/day01">
+      <method v="2" />
+    </configuration>
+    <configuration name="puzzle01.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="build/puzzle01.js" working-dir="$PROJECT_DIR$/day01">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.day01_puzzle02.js" />
+      <item itemvalue="Node.js.puzzle01.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.puzzle01.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9fc0e71b-8a99-4c81-be67-8f25dac22dac" name="Default Changelist" comment="" />
+      <created>1606853009096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606853009096</updated>
+      <workItem from="1606853011004" duration="9067000" />
+      <workItem from="1606893643987" duration="299000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1606854324607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606854324607</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finished puzzle01 for day01">
+      <created>1606856956204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606856956204</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finished puzzle02 for day01">
+      <created>1606862068750</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606862068750</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Finished puzzle01 for day01" />
+    <MESSAGE value="Finished puzzle02 for day01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished puzzle02 for day01" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="422" y="192" width="1076" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606893746658">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="422" y="192" width="1076" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606893746658" />
+    <state x="550" y="107" width="816" height="849" key="CommitChangelistDialog2" timestamp="1606862068594">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="550" y="107" width="816" height="849" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1606862068594" />
+    <state x="1203" y="360" width="424" height="478" key="FileChooserDialogImpl" timestamp="1606893732115">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1203" y="360" width="424" height="478" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1606893732115" />
+    <state width="1899" height="338" key="GridCell.Tab.0.bottom" timestamp="1606893766033">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766033" />
+    <state width="1899" height="338" key="GridCell.Tab.0.center" timestamp="1606893766032">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766032" />
+    <state width="1899" height="338" key="GridCell.Tab.0.left" timestamp="1606893766032">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766032" />
+    <state width="1899" height="338" key="GridCell.Tab.0.right" timestamp="1606893766032">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893766032" />
+    <state width="1899" height="338" key="GridCell.Tab.1.bottom" timestamp="1606893765890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
+    <state width="1899" height="338" key="GridCell.Tab.1.center" timestamp="1606893765889">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765889" />
+    <state width="1899" height="338" key="GridCell.Tab.1.left" timestamp="1606893765889">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765889" />
+    <state width="1899" height="338" key="GridCell.Tab.1.right" timestamp="1606893765889">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765889" />
+    <state width="1899" height="338" key="GridCell.Tab.2.bottom" timestamp="1606893765890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
+    <state width="1899" height="338" key="GridCell.Tab.2.center" timestamp="1606893765890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
+    <state width="1899" height="338" key="GridCell.Tab.2.left" timestamp="1606893765890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
+    <state width="1899" height="338" key="GridCell.Tab.2.right" timestamp="1606893765890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765890" />
+    <state width="1899" height="338" key="GridCell.Tab.3.bottom" timestamp="1606893765892">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765892" />
+    <state width="1899" height="338" key="GridCell.Tab.3.center" timestamp="1606893765891">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765891" />
+    <state width="1899" height="338" key="GridCell.Tab.3.left" timestamp="1606893765891">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765891" />
+    <state width="1899" height="338" key="GridCell.Tab.3.right" timestamp="1606893765891">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606893765891" />
+    <state x="467" y="169" width="986" height="724" key="SettingsEditor" timestamp="1606856284653">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="467" y="169" width="986" height="724" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1606856284653" />
+    <state x="558" y="270" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1606862126055">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="558" y="270" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606862126055" />
+  </component>
+</project>
