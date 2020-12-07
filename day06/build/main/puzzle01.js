@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.readBlock = void 0;
-console.log("Day 05, Puzzle 01!");
+console.log("Day 06, Puzzle 01!");
 var line_reader_1 = __importDefault(require("line-reader"));
 function readBlock(line, currentGroup) {
     if (!line) {
