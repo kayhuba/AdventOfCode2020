@@ -2,18 +2,15 @@ console.log("Day 09, Puzzle 01!")
 
 import linereader from "line-reader";
 
-function findSum(sum: number, summands: number[]): boolean {
+function findSum(sum: number, summands: number[], summandOffset: number, preambleLength: number): boolean {
     let i=0;
-    let j=0;
-    const preamble = summands.length;
-
-    for (; i < preamble; i++) {
-        for (j=0; j < preamble; j++) {
+    for (; i < preambleLength; i++) {
+        for (let j=0; j < preambleLength; j++) {
             if (j === i) {
                 continue;
             }
 
-            if (summands[i] + summands[j] === sum) {
+            if (summands[i + summandOffset] + summands[j + summandOffset] === sum) {
                 return true;
             }
         }
@@ -23,29 +20,21 @@ function findSum(sum: number, summands: number[]): boolean {
 }
 
 function main() {
-    const preambleLength = 5;
-    const ringBuffer: number[] = [];
-    let loadingCount = 0;
-    let start = 0;
-    let end = 0;
+    const preambleLength = 25;
+    const fullBuffer: number[] = [];
+
     linereader.eachLine("./input/input.txt", (line, last) => {
         let current = parseInt(line);
+        fullBuffer.push(current);
 
-        if (loadingCount < preambleLength) {
-            ringBuffer[loadingCount++] = current;
-        } else {
-
-            if (!findSum(current, ringBuffer)) {
-                console.log("Result: " + current);
-                process.exit();
+        if (last) {
+            for (let i=0; i < fullBuffer.length - preambleLength; i++) {
+                if (!findSum(fullBuffer[i + preambleLength], fullBuffer, i, preambleLength)) {
+                    console.log("Result: " + fullBuffer[i + preambleLength]);
+                    return;
+                }
             }
-
-            ringBuffer[end] = current;
-
-            start = (start + 1) % preambleLength;
         }
-
-        end = (end + 1) % preambleLength;
     });
 }
 
