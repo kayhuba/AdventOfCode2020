@@ -35,29 +35,33 @@ function main() {
         });
 
         busIdsSortedDecreasing.sort((a, b) => Number(b.id - a.id));
-        const busIdCount = busIdsSortedDecreasing.length;
-        const checkConstraints = (ref: bigint): boolean => {
+
+        const checkConstraints = (ref: bigint, level: number): boolean => {
             busIdCheckStats[0]++;
-            for (let i=1; i < busIdCount; i++) {
+            for (let i=1; i < (level + 1); i++) {
                 busIdCheckStats[i]++;
                 if ((ref + busIdsSortedDecreasing[i].offset) % busIdsSortedDecreasing[i].id !== 0n) {
                     return false;
                 }
+
+                console.log("Match with factors (" + (busIdsSortedDecreasing[0].id) + " * " + (ref + busIdsSortedDecreasing[0].offset) / busIdsSortedDecreasing[0].id + ") and (" + busIdsSortedDecreasing[i].id + " * " + (ref + busIdsSortedDecreasing[i].offset) / busIdsSortedDecreasing[i].id + ")")
             }
 
             return true;
         };
 
-        let baseRef = busIdsSortedDecreasing[0].id - busIdsSortedDecreasing[0].offset;
-        while (!checkConstraints(baseRef)) {
-            baseRef+=busIdsSortedDecreasing[0].id;
-
-            if (baseRef % 1000000n === 0n) {
-                console.log("No result with multiplier " + baseRef + " stats: " + busIdCheckStats);
+        let additionToMultiple: bigint = 1n;
+        let multiple: bigint = 0n;
+        const base = busIdsSortedDecreasing[0].id - busIdsSortedDecreasing[0].offset;
+        for (let level=1; level < busIdsSortedDecreasing.length; level++) {
+            while (!checkConstraints(base + (multiple * busIdsSortedDecreasing[0].id), level)) {
+                multiple += additionToMultiple;
             }
+
+            additionToMultiple = additionToMultiple * busIdsSortedDecreasing[level].id;
         }
 
-        console.log("Result: " + (baseRef));
+        console.log("Result: " + ((multiple + 1n) * busIdsSortedDecreasing[0].id - busIdsSortedDecreasing[0].offset));
     });
 }
 
