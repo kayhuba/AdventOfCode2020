@@ -16,8 +16,6 @@ function main() {
             return;
         }
 
-        const busIdCheckStats: number[] = [];
-
         let offset = 0n;
         const busIdsSortedDecreasing: BusIdAndOffset[] = [];
         const busIdsWithInvalid: string[] = line.split(",");
@@ -28,7 +26,6 @@ function main() {
             } else {
                 id = BigInt(parseInt(busIdsWithInvalid));
                 busIdsSortedDecreasing.push({id: id, offset: offset});
-                busIdCheckStats.push(0);
             }
             busIds.push(id);
             offset++;
@@ -37,9 +34,7 @@ function main() {
         busIdsSortedDecreasing.sort((a, b) => Number(b.id - a.id));
 
         const checkConstraints = (ref: bigint, level: number): boolean => {
-            busIdCheckStats[0]++;
             for (let i=1; i < (level + 1); i++) {
-                busIdCheckStats[i]++;
                 if ((ref + busIdsSortedDecreasing[i].offset) % busIdsSortedDecreasing[i].id !== 0n) {
                     return false;
                 }
