@@ -1,4 +1,4 @@
-console.log("Day 17, Puzzle 02!")
+console.log("Day 18, Puzzle 02!")
 
 import linereader from "line-reader";
 

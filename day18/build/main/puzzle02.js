@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-console.log("Day 17, Puzzle 02!");
+console.log("Day 18, Puzzle 02!");
 const line_reader_1 = __importDefault(require("line-reader"));
 class NumberExpression {
     constructor(number) {
