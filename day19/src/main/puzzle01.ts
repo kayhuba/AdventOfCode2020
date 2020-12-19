@@ -2,8 +2,12 @@ console.log("Day 19, Puzzle 01!")
 
 import linereader from "line-reader";
 
+interface NumberedRule {
+    [ruleNumber: number]: Rule;
+}
+
 interface Rule {
-    evaluate(): string;
+    evaluate(numberedRule: NumberedRule): string;
 }
 
 class MatchRule implements Rule {
@@ -19,112 +23,178 @@ class MatchRule implements Rule {
 }
 
 class ReferenceRule implements Rule {
-    lineReference: number;
-    lines: Rule[];
+    ruleReference: number;
 
-    constructor(lineReference: number, lines: Rule[]) {
-        this.lineReference = lineReference;
-        this.lines = lines;
+    constructor(ruleReference: number) {
+        this.ruleReference = ruleReference;
     }
 
+    evaluate(numberedRule: NumberedRule): string {
+        return numberedRule[this.ruleReference].evaluate(numberedRule);
+    }
+}
+
+class InvalidRule implements Rule {
     evaluate(): string {
-        return this.lines[this.lineReference].evaluate();
+        throw new Error("This is an invalid rule");
     }
 }
 
 class CombineRule implements Rule {
-    ruleA: Rule;
-    ruleB: Rule;
+    rules: Rule[] = [];
 
-    constructor(ruleA: Rule, ruleB: Rule) {
-        this.ruleA = ruleA;
-        this.ruleB = ruleB;
+    constructor(rules: Rule[]) {
+        this.rules = rules;
     }
 
-    evaluate(): string {
-        return this.ruleA.evaluate() + this.ruleB.evaluate();
+    evaluate(numberedRule: NumberedRule): string {
+        let evaluated = "";
+        for (let i=0; i < this.rules.length; i++) {
+            evaluated += this.rules[i].evaluate(numberedRule);
+        }
+        return evaluated;
     }
 }
 
 class OrRule implements Rule {
-    ruleA: Rule;
-    ruleB: Rule;
+    ruleA: Rule | undefined;
+    ruleB: Rule | undefined;
 
-    constructor(ruleA: Rule, ruleB: Rule) {
-        this.ruleA = ruleA;
-        this.ruleB = ruleB;
-    }
-
-    evaluate(): string {
-        return "(" + this.ruleA.evaluate() + ")|(" + this.ruleB.evaluate() + ")";
-    }
-}
-
-class NumberedRule {
-    ruleNumber: number;
-    rule: Rule | undefined;
-
-    constructor(ruleNumber: number) {
-        this.ruleNumber = ruleNumber;
-    }
-
-    evaluate(): string {
-        if (this.rule === undefined) {
-            throw new Error("Rule not defined yet!");
+    evaluate(numberedRule: NumberedRule): string {
+        if (this.ruleA === undefined || this.ruleB === undefined) {
+            throw new Error("OrRule is not complete");
         }
 
-        return this.rule.evaluate();
+        return "((" + this.ruleA.evaluate(numberedRule) + ")|(" + this.ruleB.evaluate(numberedRule) + "))";
     }
 }
 
 enum Token {
-    MATCH="^\\s*\\\"(.*)\\\"",
-    REFERENCE="^\\s*(\\d+)",
-    OR="^\\s*\\|",
-    WHITESPACE="\\s*"
+    STRING="^\\s*\\\"(.*)\\\"\\s*",
+    REFERENCE="^\\s*(\\d+)\\s*",
+    OR="^\\s*\\|\\s*",
+    UNKNOWN=".*"
+}
+
+function hasMoreToken(input: string): boolean {
+    return input.match(Token.STRING) !== null || input.match(Token.REFERENCE) !== null || input.match(Token.OR) !== null;
+}
+
+function peekNextToken(input: string): Token {
+    if (input.match(Token.STRING) !== null) {
+        return Token.STRING;
+    }
+
+    if (input.match(Token.REFERENCE) !== null) {
+        return Token.REFERENCE;
+    }
+
+    if (input.match(Token.OR) !== null) {
+        return Token.OR;
+    }
+
+    return Token.UNKNOWN;
+}
+
+function consumeNextToken(input: string): {rule: Rule, remaining: string} {
+    let token = input.match(Token.STRING);
+    if (token !== null) {
+        return {
+            remaining: input.substring(token[0].length),
+            rule: new MatchRule(token[1])
+        };
+    }
+
+    token = input.match(Token.REFERENCE);
+    if (token !== null) {
+        return {
+            remaining: input.substring(token[0].length),
+            rule: new ReferenceRule(parseInt(token[1]))
+        };
+    }
+
+    token = input.match(Token.OR);
+    if (token !== null) {
+        return {
+            remaining: input.substring(token[0].length),
+            rule: new OrRule()
+        };
+    }
+
+    return {
+        remaining: input,
+        rule: new InvalidRule()
+    };
 }
 
 function main() {
-    let lineCount = 0;
-    const numberedRules: NumberedRule[] = [];
+    const numberedLine: NumberedRule = {};
     const matchLines: string[] = [];
 
-    /*
-    const safeMatch = (str: string, pattern: string): RegExpMatchArray => {
-        const match = str.match(pattern);
-        if (match === null) {
-            throw new Error("")
-        }
-    };
-     */
+    linereader.eachLine("./input/input1.txt", (line, last) => {
+        const consumeReferenceToken = (): Rule => {
+            const referenceRules: ReferenceRule[] = [];
+            while (hasMoreToken(line) && peekNextToken(line) === Token.REFERENCE) {
+                let result = consumeNextToken(line);
+                line = result.remaining;
+                referenceRules.push(result.rule as ReferenceRule);
+            }
 
-    linereader.eachLine("./input/input.txt", (line, last) => {
-        if (line.match("^\d+:")) {
-            let token = line.match("^(\d+):");
+            if (referenceRules.length === 1) {
+                return referenceRules[0];
+            }
+
+            return new CombineRule(referenceRules);
+        };
+
+
+        if (line.match("^\\d+:")) {
+            let token = line.match("^(\\d+):");
             if (token === null) {
                 throw new Error("No match");
             }
 
             const ruleNumber = parseInt(token[1]);
-            let numberedRule: NumberedRule = new NumberedRule(ruleNumber);
 
-            line = line.substring(token[1].length);
+            line = line.substring(token[0].length);
 
             const ruleStack: Rule[] = [];
-            while (line.length > 0) {
-                token = line.match(Token.MATCH);
-                if (token !== null) {
-                    ruleStack.push(new MatchRule(token[1]));
-                    line = line.substring(token.length);
+            if (peekNextToken(line) === Token.STRING) {
+                ruleStack.push(consumeNextToken(line).rule);
+            } else if (peekNextToken(line) === Token.REFERENCE) {
+                ruleStack.push(consumeReferenceToken());
+
+                if (hasMoreToken(line)) {
+                    let result = consumeNextToken(line);
+                    line = result.remaining;
+
+                    // according to rules this has to be an or rule
+                    let orRule: OrRule = result.rule as OrRule;
+
+                    orRule.ruleA = ruleStack.pop();
+                    orRule.ruleB = consumeReferenceToken();
+                    ruleStack.push(orRule);
                 }
             }
 
-            numberedRule.rule = ruleStack[0];
+            numberedLine[ruleNumber] = ruleStack[0];
+        } else {
+            if (line.length > 0) {
+                matchLines.push(line);
+            }
         }
 
-
         if (last) {
-            console.log("Result: ");
+            let matchCount = 0;
+            let pattern = "^(" + numberedLine[0].evaluate(numberedLine) + ")$";
+            console.log("Evaluated pattern: " + pattern);
+
+            for (let i=0; i < matchLines.length; i++) {
+                if (matchLines[i].match(pattern) !== null) {
+                    matchCount++;
+                }
+            }
+            console.log("Result: " + matchCount);
         }
     });
 }
