@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-console.log("Day 23, Puzzle 01!");
+console.log("Day 23, Puzzle 02!");
 const line_reader_1 = __importDefault(require("line-reader"));
 class Cup {
     constructor(value) {
@@ -22,35 +22,25 @@ class Cup {
         return this.previousCup;
     }
 }
-function linkedListToString(firstCup, separator, embrace) {
-    let result = "";
-    let limit = 0;
-    let currentCup = firstCup;
-    do {
-        if (currentCup !== firstCup) {
-            result += separator;
-        }
-        if (currentCup === embrace) {
-            result += "(";
-        }
-        result += currentCup.label;
-        if (currentCup === embrace) {
-            result += ")";
-        }
-        currentCup = currentCup.safeNext();
-        limit++;
-    } while (currentCup !== firstCup && limit < 15);
-    return result;
-}
 function main() {
     let cupLength;
+    const labelIndex = new Array(1000000);
     const cups = [];
-    let firstCup;
     line_reader_1.default.eachLine("./input/input.txt", (line, last) => {
         const numbers = line.split("");
+        let maxNumber = 0;
         numbers.forEach(number => {
-            cups.push(new Cup(parseInt(number)));
+            maxNumber = Math.max(maxNumber, parseInt(number));
+            let label = parseInt(number);
+            let cup = new Cup(label);
+            labelIndex[label - 1] = cup;
+            cups.push(cup);
         });
+        for (let i = maxNumber + 1; i <= 1000000; i++) {
+            let cup = new Cup(i);
+            labelIndex[i - 1] = cup;
+            cups.push(cup);
+        }
         cupLength = cups.length;
         for (let i = 0; i < cupLength; i++) {
             if (i === 0) {
@@ -61,21 +51,17 @@ function main() {
             }
             cups[i].nextCup = cups[(i + 1) % cupLength];
         }
-        firstCup = cups[0];
-        let currentCup = firstCup;
+        let currentCup = cups[0];
         if (last) {
-            let currentCupIndex = 0;
             let n1;
             let n2;
             let n3;
             let destinationCup;
             let destinationCupValue;
-            for (let i = 0; i < 100; i++) {
-                currentCupIndex = i % cupLength;
-                console.log("-- move " + (i + 1) + " --");
-                console.log("cups: " + linkedListToString(firstCup, " ", currentCup));
-                console.log("pick up: " + currentCup.safeNext().label + ", " + currentCup.safeNext().safeNext().label + ", " + currentCup.safeNext().safeNext().safeNext().label);
-                console.log("");
+            for (let i = 0; i < 10000000; i++) {
+                if (i % 100000 === 0) {
+                    console.log("Move " + i);
+                }
                 n1 = currentCup.safeNext();
                 n2 = n1.safeNext();
                 n3 = n2.safeNext();
@@ -85,36 +71,30 @@ function main() {
                 do {
                     destinationCupValue--;
                     if (destinationCupValue === 0) {
-                        destinationCupValue = 9;
+                        destinationCupValue = cups.length;
                     }
-                    destinationCup = currentCup.safeNext();
-                    while (destinationCup.label !== destinationCupValue && destinationCup !== currentCup) {
-                        destinationCup = destinationCup.safeNext();
-                    }
-                } while (destinationCup.label !== destinationCupValue);
+                    destinationCup = labelIndex[destinationCupValue - 1];
+                } while (destinationCup === n1 || destinationCup === n2 || destinationCup === n3);
                 let tmpNext = destinationCup.safeNext();
                 n1.previousCup = destinationCup;
                 destinationCup.nextCup = n1;
                 n3.nextCup = tmpNext;
                 tmpNext.previousCup = n3;
-                // find first cup relative to currentCup and currentCupIndex
-                firstCup = currentCup;
-                for (let j = 0; j < currentCupIndex; j++) {
-                    firstCup = firstCup.safePrev();
-                }
                 currentCup = currentCup.safeNext();
             }
-            console.log("-- final --");
-            console.log("cups: " + linkedListToString(firstCup, " ", currentCup));
             // for the result, locate the cup with value 1 and use as first cup
-            while (firstCup.label !== 1) {
-                firstCup = firstCup.safeNext();
+            while (currentCup.label !== 1) {
+                currentCup = currentCup.safeNext();
             }
-            console.log("Result: " + linkedListToString(firstCup, "").substring(1));
+            const firstAfterCup1 = currentCup.safeNext().label;
+            const secondAfterCup2 = currentCup.safeNext().safeNext().label;
+            console.log("First after cup 1:  " + firstAfterCup1);
+            console.log("Second after cup 1: " + secondAfterCup2);
+            console.log("Result: " + (firstAfterCup1 * secondAfterCup2));
         }
     });
 }
 if (require.main === module) {
     main();
 }
-//# sourceMappingURL=puzzle01.js.map
+//# sourceMappingURL=puzzle02.js.map
