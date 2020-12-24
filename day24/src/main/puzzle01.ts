@@ -4,72 +4,70 @@ import linereader from "line-reader";
 
 type NavStep = "e" | "se" | "sw" | "w" | "nw" | "ne";
 
+interface HexHorizontalCoordinates {
+    [x: number]: HexTile;
+}
+
+interface HexMap {
+    [y: number]: HexHorizontalCoordinates;
+}
+
+class Coordinates {
+    verticalOffset: number = 0;
+    horizontalOffset: number = 0;
+
+    e(): Coordinates {
+        this.horizontalOffset++;
+        return this;
+    }
+
+    se(): Coordinates {
+        this.horizontalOffset += 0.5;
+        this.verticalOffset--;
+        return this;
+    }
+
+    sw(): Coordinates {
+        this.horizontalOffset -= 0.5;
+        this.verticalOffset--;
+        return this;
+    }
+
+    w(): Coordinates {
+        this.horizontalOffset--;
+        return this;
+    }
+
+    nw(): Coordinates {
+        this.horizontalOffset -= 0.5;
+        this.verticalOffset++;
+        return this;
+    }
+
+    ne(): Coordinates {
+        this.horizontalOffset += 0.5;
+        this.verticalOffset++;
+        return this;
+    }
+}
+
 class HexTile {
     whiteSideUp: boolean = true;
+    coordinates: Coordinates;
 
-    private east?: HexTile;
-    private southEast?: HexTile;
-    private southWest?: HexTile;
-    private west?: HexTile;
-    private northWest?: HexTile;
-    private northEast?: HexTile;
+    constructor(coordinates: Coordinates) {
+        this.coordinates = coordinates;
+}
 
     flip(): void {
         this.whiteSideUp = !this.whiteSideUp;
-    }
-
-    e(): HexTile {
-        if (!this.east) {
-            this.east = new HexTile();
-        }
-
-        return this.east;
-    }
-
-    se(): HexTile {
-        if (!this.southEast) {
-            this.southEast = new HexTile();
-        }
-
-        return this.southEast;
-    }
-
-    sw(): HexTile {
-        if (!this.southWest) {
-            this.southWest = new HexTile();
-        }
-
-        return this.southWest;
-    }
-
-    w(): HexTile {
-        if (!this.west) {
-            this.west = new HexTile();
-        }
-
-        return this.west;
-    }
-
-    nw(): HexTile {
-        if (!this.northWest) {
-            this.northWest = new HexTile();
-        }
-
-        return this.northWest;
-    }
-
-    ne(): HexTile {
-        if (!this.northEast) {
-            this.northEast = new HexTile();
-        }
-
-        return this.northEast;
+        console.log("Flipping tile [" + this.coordinates.verticalOffset + "][" + this.coordinates.horizontalOffset + "] to " + (this.whiteSideUp ? "white" : "black"));
     }
 }
 
 function main() {
 
-    const refTile: HexTile = new HexTile();
+    const hexMap: HexMap = {};
     const allTiles: HexTile[] = [];
     const tileNavs: NavStep[][] = [];
     linereader.eachLine("./input/input.txt", (line, last) => {
@@ -88,12 +86,27 @@ function main() {
         }
 
         if (last) {
-            let currentTile = refTile;
+            hexMap[0] = {};
+            hexMap[0][0] = new HexTile(new Coordinates());
+            allTiles.push(hexMap[0][0]);
+
             tileNavs.forEach(tileNav => {
+                let coordinates = new Coordinates();
                 tileNav.forEach(navStep => {
-                    currentTile = currentTile[navStep]();
+                    coordinates = coordinates[navStep]();
                 });
-                currentTile.flip();
+
+                if (!hexMap[coordinates.verticalOffset]) {
+                    hexMap[coordinates.verticalOffset] = {};
+                }
+
+                let tile = hexMap[coordinates.verticalOffset][coordinates.horizontalOffset];
+                if (!tile) {
+                    tile = new HexTile(coordinates);
+                    hexMap[coordinates.verticalOffset][coordinates.horizontalOffset] = tile;
+                    allTiles.push(tile);
+                }
+                tile.flip();
             });
 
             let blackUp: number = 0;

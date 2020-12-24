@@ -5,52 +5,52 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 console.log("Day 24, Puzzle 01!");
 const line_reader_1 = __importDefault(require("line-reader"));
-class HexTile {
+class Coordinates {
     constructor() {
+        this.verticalOffset = 0;
+        this.horizontalOffset = 0;
+    }
+    e() {
+        this.horizontalOffset++;
+        return this;
+    }
+    se() {
+        this.horizontalOffset += 0.5;
+        this.verticalOffset--;
+        return this;
+    }
+    sw() {
+        this.horizontalOffset -= 0.5;
+        this.verticalOffset--;
+        return this;
+    }
+    w() {
+        this.horizontalOffset--;
+        return this;
+    }
+    nw() {
+        this.horizontalOffset -= 0.5;
+        this.verticalOffset++;
+        return this;
+    }
+    ne() {
+        this.horizontalOffset += 0.5;
+        this.verticalOffset++;
+        return this;
+    }
+}
+class HexTile {
+    constructor(coordinates) {
         this.whiteSideUp = true;
+        this.coordinates = coordinates;
     }
     flip() {
         this.whiteSideUp = !this.whiteSideUp;
-    }
-    e() {
-        if (!this.east) {
-            this.east = new HexTile();
-        }
-        return this.east;
-    }
-    se() {
-        if (!this.southEast) {
-            this.southEast = new HexTile();
-        }
-        return this.southEast;
-    }
-    sw() {
-        if (!this.southWest) {
-            this.southWest = new HexTile();
-        }
-        return this.southWest;
-    }
-    w() {
-        if (!this.west) {
-            this.west = new HexTile();
-        }
-        return this.west;
-    }
-    nw() {
-        if (!this.northWest) {
-            this.northWest = new HexTile();
-        }
-        return this.northWest;
-    }
-    ne() {
-        if (!this.northEast) {
-            this.northEast = new HexTile();
-        }
-        return this.northEast;
+        console.log("Flipping tile [" + this.coordinates.verticalOffset + "][" + this.coordinates.horizontalOffset + "] to " + (this.whiteSideUp ? "white" : "black"));
     }
 }
 function main() {
-    const refTile = new HexTile();
+    const hexMap = {};
     const allTiles = [];
     const tileNavs = [];
     line_reader_1.default.eachLine("./input/input.txt", (line, last) => {
@@ -69,12 +69,24 @@ function main() {
             }
         }
         if (last) {
-            let currentTile = refTile;
+            hexMap[0] = {};
+            hexMap[0][0] = new HexTile(new Coordinates());
+            allTiles.push(hexMap[0][0]);
             tileNavs.forEach(tileNav => {
+                let coordinates = new Coordinates();
                 tileNav.forEach(navStep => {
-                    currentTile = currentTile[navStep]();
+                    coordinates = coordinates[navStep]();
                 });
-                currentTile.flip();
+                if (!hexMap[coordinates.verticalOffset]) {
+                    hexMap[coordinates.verticalOffset] = {};
+                }
+                let tile = hexMap[coordinates.verticalOffset][coordinates.horizontalOffset];
+                if (!tile) {
+                    tile = new HexTile(coordinates);
+                    hexMap[coordinates.verticalOffset][coordinates.horizontalOffset] = tile;
+                    allTiles.push(tile);
+                }
+                tile.flip();
             });
             let blackUp = 0;
             allTiles.forEach(tile => tile.whiteSideUp ? 0 : blackUp++);
